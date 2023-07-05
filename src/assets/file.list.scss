@@ -1,0 +1,122 @@
+.top {
+    margin-top: 20px;
+    .top-op {
+        display: flex;
+        align-items: center;
+        .btn {
+            margin-right: 10px;
+        }
+        .search-panel {
+            margin-left: 10px;
+            width: 300px;
+        }
+        .icon-refresh {
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .not-allow {
+            background: #d2d2d2 !important;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.file-list {
+    .file-item {
+        display: flex;
+        align-items: center;
+        padding: 6px 0px;
+        .file-name {
+            margin-left: 8px;
+            flex: 1;
+            width: 0;
+            overflow: hidden;
+            // 当对象内文本溢出时显示省略标记(...)
+            text-overflow: ellipsis;
+            // 不换行 强行文本在同一行显示
+            white-space: nowrap;
+            span {
+                cursor: pointer;
+                &:hover {
+                    color: #06a7ff;
+                }
+            }
+            .transfer-status {
+                font-size: 13px;
+                margin-left: 10px;
+                color: #e6a23c;
+            }
+            .transfer-fail {
+                color: #f75000;
+            }
+        }
+        .edit-panel {
+            flex: 1;
+            width: 0;
+            display: flex;
+            align-items: center;
+            margin: 0px 5px;
+            .iconfont {
+                margin-left: 10px;
+                background: #0c95f7;
+                color: #fff;
+                padding: 3px 5px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .not-allow {
+                cursor: not-allowed;
+                background: #7cb1d7;
+                color: #ddd;
+                text-decoration: none;
+            }
+        }
+        .op {
+            width: 280px;
+            margin-left: 15px;
+            .iconfont {
+                font-size: 13px;
+                margin-left: 5px;
+                color: #06a7ff;
+                cursor: pointer;
+            }
+            .iconfont::before {
+                margin-right: 1px;
+            }
+        }
+    }
+}
+
+// justify-content 设置主轴上的子元素排列方式
+// align-content 设置侧轴上的子元素的排列方式（多行）
+.no-data {
+    // vh就是当前屏幕可见高度的1%
+    // height:100vh == height:100%;
+    // calc(100vh - 150px)表示整个浏览器窗口高度减去150px的大小
+    height: calc(100vh - 150px);
+    display: flex;
+    // align-items 设置侧轴上的子元素的排列方式（单行）
+    align-items: center;
+    // 设置主轴上的子元素排列方式
+    justify-content: center;
+    .no-data-inner {
+        text-align: center;
+        .tips {
+            margin-top: 10px;
+        }
+        .op-list {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .op-item {
+                cursor: pointer;
+                width: 100px;
+                height: 100px;
+                margin: 0px 10px;
+                padding: 5px 0px;
+                background: rgb(241, 241, 241);
+            }
+        }
+    }
+}
